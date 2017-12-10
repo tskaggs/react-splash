@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background: #324157;
+}
+
+a {
+  color: #fff;
 }
 
 /*App*/
@@ -25,13 +30,15 @@ body {
 /*Home*/
 .Home {
   padding: 20px;
+  color: #fff;
 }
 
 .Home-header {
   background-color: #324157;
-  height: 360px;
+  min-height: 360px;
   padding: 20px;
   color: white;
+  margin-bottom: 130px;
 }
   
 .image {

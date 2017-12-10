@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Card, Button } from 'element-react';
 import CreateClass from 'create-react-class';
+import phone from '../../assets/images/phone.png';
 
 var LayoutColumn = CreateClass({
   getInitialState: function() {
@@ -59,13 +60,11 @@ class Index extends Component {
       <div className="Home">
         <Layout.Row gutter="20">
           <Layout.Col xs="24" sm="24" md="24" lg="24" className="Home-header">
-            <h1>Welcome</h1>
+            <h1>Built with love and cool stuff.</h1>
+            <img src={phone} className="" alt="Element UI for React"/>
             <p>A cool react layout for splash pages and things!</p>
             <p>Built in less than 10 hours</p>
             <Button type="primary" size="large">Action!</Button>
-          </Layout.Col>
-          <Layout.Col xs="24" sm="24" md="24" lg="24">
-            <h2>Built with love and cool stuff.</h2>
           </Layout.Col>
           <LayoutColumn data={ data }  />
         </Layout.Row>
