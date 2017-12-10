@@ -4,7 +4,7 @@ import { Menu, Button } from 'element-react';
 
 import 'element-theme-default';
 
-import logo from './logo.svg';
+import logo from '../../components/Images/logo.svg';
 import './style.css';
 
 const Header = () => (
