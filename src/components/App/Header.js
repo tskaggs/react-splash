@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import { Menu, Button } from 'element-react';
 
 import 'element-theme-default';
-
 import logo from '../../assets/images/logo.svg';
-import './style.css';
 
 const Header = () => (
 	<Menu theme="dark" defaultActive="1" className="el-menu-demo" mode="horizontal">

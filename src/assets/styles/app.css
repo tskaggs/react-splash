@@ -1,0 +1,74 @@
+/*App*/
+.App {
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+.App-right-menu {
+  float: right;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*Home*/
+.Home {
+  padding: 20px;
+}
+
+.image {
+  padding: 0 20px;
+  width: 144px;
+  height: 144px;
+}
+
+.element-image {
+  background: #2ca5ff;
+}
+
+/*About*/
+.About {
+  text-align: center;
+}
+
+.About-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.About-title {
+  font-size: 1.5em;
+}
+
+.About-intro {
+  font-size: large;
+}
+
+/*NotFound*/
+.NotFound {
+  text-align: center;
+}
+
+.NotFound-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.NotFound-title {
+  font-size: 1.5em;
+}
+
+.NotFound-intro {
+  font-size: large;
+}

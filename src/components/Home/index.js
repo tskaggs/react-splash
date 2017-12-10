@@ -4,7 +4,6 @@ import { Layout, Card, Button } from 'element-react';
 import reactLogo from '../../assets/images/logo.svg';
 import elementReactLogo from '../../assets/images/element-react.svg';
 import reactRouterLogo from '../../assets/images/react-router.png';
-import './style.css';
 
 class Index extends Component {
   render() {
