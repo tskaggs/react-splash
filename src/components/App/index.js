@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './style.css';
+import Header from './Header'
+import Main from './Main'
 
 class App extends Component {
   render() {
@@ -10,12 +11,8 @@ class App extends Component {
 
     return (
       <div className={classnames('App', className)} {...props}>
-        <header className="App-header">
-          <h1 className="App-title">Welcome</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
+        <Main />
       </div>
     );
   }
