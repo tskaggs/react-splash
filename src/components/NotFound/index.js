@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import './style.css';
 
 class NotFound extends Component {
   render() {
-    const { className, ...props } = this.props;
-
     return (
-      <div className={classnames('NotFound', className)} {...props}>
+      <div className="NotFound">
         <header className="NotFound-header">
           <h1 className="NotFound-title">Welcome</h1>
         </header>
