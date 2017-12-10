@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "element-react": "^1.4.4",
+    "element-theme-default": "^1.4.12",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
