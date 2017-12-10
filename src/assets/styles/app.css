@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /*App*/
 .App {
   text-align: center;
@@ -23,14 +27,22 @@
   padding: 20px;
 }
 
+.Home-header {
+  background-color: #324157;
+  height: 360px;
+  padding: 20px;
+  color: white;
+}
+  
 .image {
   padding: 0 20px;
   width: 144px;
   height: 144px;
 }
 
-.element-image {
-  background: #2ca5ff;
+.card-element {
+  background: #324157;
+  color: #fff;
 }
 
 /*About*/

@@ -1,54 +1,73 @@
 import React, { Component } from 'react';
 import { Layout, Card, Button } from 'element-react';
+import CreateClass from 'create-react-class';
 
-import reactLogo from '../../assets/images/logo.svg';
-import elementReactLogo from '../../assets/images/element-react.svg';
-import reactRouterLogo from '../../assets/images/react-router.png';
+var LayoutColumn = CreateClass({
+  getInitialState: function() {
+    return { items: [] }
+  },
+  render: function() {
+    return (
+      <div>
+        { 
+          this.props.data.map(function(item, i) {
+            return <Layout.Col xs="24" sm="24" md="8" lg="8" key={i}>
+                      <Card bodyStyle={{ padding: 0 }} className="card-element">
+                        <img src={item.image} className="image" alt="Element UI for React"/>
+                        <div style={{ padding: 14 }}>
+                          <span>{item.name}</span>
+                          <div className="bottom clearfix">
+                            <p>{item.blurb}</p>
+                            <Button type="primary" className="button" href={item.src} target="_blank">{item.button}</Button>
+                          </div>
+                        </div>
+                      </Card>
+                    </Layout.Col>
+          })
+        }
+      </div>);
+  }
+});
+
+var data =  [
+  {
+    name: 'React',
+    blurb: 'We utilize the React library!',
+    button: 'React',
+    src: 'https://reactjs.org/',
+    image: require('../../assets/images/logo.svg')
+  },
+  {
+    name: 'Element UI for React',
+    blurb: 'Thanks to Element UI for the UI kit! Looks good.',
+    button: 'Element for React',
+    src: 'https://eleme.github.io/element-react/#/en-US/quick-start',
+    image: require('../../assets/images/element-react.svg')
+  },
+  {
+    name: 'React Router',
+    blurb: 'This react-router-dom is great for routing!',
+    button: 'React Router',
+    src: 'https://reactjs.org/',
+    image: require('../../assets/images/react-router.png')
+  }
+];
 
 class Index extends Component {
   render() {
     return (
       <div className="Home">
         <Layout.Row gutter="20">
+          <Layout.Col xs="24" sm="24" md="24" lg="24" className="Home-header">
+            <h1>Welcome</h1>
+            <p>A cool react layout for splash pages and things!</p>
+            <p>Built in less than 10 hours</p>
+            <Button type="primary" size="large">Action!</Button>
+          </Layout.Col>
           <Layout.Col xs="24" sm="24" md="24" lg="24">
             <h2>Built with love and cool stuff.</h2>
           </Layout.Col>
-          <Layout.Col xs="24" sm="24" md="8" lg="8">
-            <Card bodyStyle={{ padding: 0 }}>
-              <img src={reactLogo} className="image react-image" alt="React"/>
-              <div style={{ padding: 14 }}>
-                <span>React</span>
-                <div className="bottom clearfix">
-                  <p>We utilize the React library!</p>
-                  <Button type="text" className="button">React</Button>
-                </div>
-              </div>
-            </Card>
-          </Layout.Col>
-          <Layout.Col xs="24" sm="24" md="8" lg="8">
-            <Card bodyStyle={{ padding: 0 }}>
-              <img src={elementReactLogo} className="image element-image" alt="Element UI for React"/>
-              <div style={{ padding: 14 }}>
-                <span>Element UI for React</span>
-                <div className="bottom clearfix">
-                  <p>Thanks to Element UI for the UI kit! Looks good.</p>
-                  <Button type="text" className="button">Element for React</Button>
-                </div>
-              </div>
-            </Card>
-          </Layout.Col>
-          <Layout.Col xs="24" sm="24" md="8" lg="8">
-            <Card bodyStyle={{ padding: 0 }}>
-              <img src={reactRouterLogo} className="image" alt="React Router"/>
-              <div style={{ padding: 14 }}>
-                <span>React Router</span>
-                <div className="bottom clearfix">
-                  <p>This react-router-dom is great for routing!</p>
-                  <Button type="text" className="button" href="https://reactjs.org/" target="_blank">Operating button</Button>
-                </div>
-              </div>
-            </Card>
-          </Layout.Col>
+          <LayoutColumn data={ data }  />
         </Layout.Row>
       </div>
     );
